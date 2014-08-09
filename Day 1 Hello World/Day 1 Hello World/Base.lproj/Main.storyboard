@@ -25,7 +25,7 @@
                                     <rect key="frame" x="196" y="229" width="88.5" height="20.5"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="114" y="229" width="93" height="20.5"/>
+                                    <rect key="frame" x="114" y="229" width="93" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
