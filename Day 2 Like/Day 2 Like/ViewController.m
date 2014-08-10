@@ -9,7 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-            
+
+    @property int likes;
 
 @end
 
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.likes = 0;
+    self.likesLabel.text = [@(self.likes) stringValue];
 }
 
 - (void)didReceiveMemoryWarning {
