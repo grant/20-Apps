@@ -18,14 +18,33 @@
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.likes = 0;
-    self.likesLabel.text = [@(self.likes) stringValue];
+
+    // Likes label
+    _likes = 0;
+    [_likesLabel setFont: [UIFont systemFontOfSize:200.0f]];
+    [_likesLabel setTextColor:[UIColor whiteColor]];
+    [_likesTitle setTextColor:[UIColor whiteColor]];
+    [self updateLikes];
+    
+    // Background
+    CGFloat r = 231;
+    CGFloat g = 76;
+    CGFloat b = 60;
+    self.view.backgroundColor = [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:255.0];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)handleButtonClick:(id)sender {
+    ++_likes;
+    [self updateLikes];
+}
+
+- (void)updateLikes {
+    _likesLabel.text = [@(_likes) stringValue];
 }
 
 @end
