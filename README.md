@@ -16,3 +16,7 @@ Here are a couple rules I've put for myself
 - Apps must be created in 1 day on the day. No working ahead.
 - Each app must have a unique feature.
 - Do not copy any source code at all.
+
+## License
+
+MIT License.
