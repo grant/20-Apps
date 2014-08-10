@@ -165,6 +165,7 @@
 				TargetAttributes = {
 					038557D21997DEEE0060693E = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 6Q7K283DQH;
 					};
 					038557E81997DEEE0060693E = {
 						CreatedOnToolsVersion = 6.0;
@@ -406,6 +407,7 @@
 				038557F51997DEEE0060693E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		038557F61997DEEE0060693E /* Build configuration list for PBXNativeTarget "Day 2 LikeTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +416,7 @@
 				038557F81997DEEE0060693E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -23,10 +23,10 @@
     _likes = 0;
     [_likesLabel setFont: [UIFont systemFontOfSize:150]];
     [_likesLabel setTextColor:[UIColor whiteColor]];
-    [_likesTitle setTextColor:[UIColor whiteColor]];
     [self updateLikes];
     
     // Likes Title
+    [_likesTitle setTextColor:[UIColor whiteColor]];
     
     // Like Button
     [_likeButton.titleLabel setFont: [UIFont systemFontOfSize:20]];
