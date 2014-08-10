@@ -21,10 +21,15 @@
 
     // Likes label
     _likes = 0;
-    [_likesLabel setFont: [UIFont systemFontOfSize:200.0f]];
+    [_likesLabel setFont: [UIFont systemFontOfSize:150]];
     [_likesLabel setTextColor:[UIColor whiteColor]];
     [_likesTitle setTextColor:[UIColor whiteColor]];
     [self updateLikes];
+    
+    // Likes Title
+    
+    // Like Button
+    [_likeButton.titleLabel setFont: [UIFont systemFontOfSize:20]];
     
     // Background
     CGFloat r = 231;
