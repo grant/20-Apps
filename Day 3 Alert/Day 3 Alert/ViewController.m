@@ -9,14 +9,29 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
 
+int numLaunches;
+int numCancels;
+bool lastLaunchCancelled;
+static NSArray *cancelStrings;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    numLaunches = 0;
+    numCancels = 0;
+    lastLaunchCancelled = false;
+    cancelStrings = [NSArray arrayWithObjects:
+        @"Please launch the missles?",
+        @"Really, launch the missles already!",
+        @"I'm serious, launch the missles.",
+        @"Gahhhhhhhh",
+        @"LAUNCH THE MISSLES, DAMMIT!",
+        nil
+    ];
 
     // Background
     CGFloat r = 221;
@@ -47,12 +62,23 @@
 }
 
 - (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSString *newTitle;
     if (buttonIndex == 1) {
         // confirm
-        [_launchButton setTitle:@"Launch the missles (again)!" forState:UIControlStateNormal];
+        ++numLaunches;
+        if (lastLaunchCancelled) {
+            newTitle = @"Thanks you!";
+        } else {
+            newTitle = @"Launch the missles (again)!";
+        }
     } else if (buttonIndex == 0) {
         // cancel
+        ++numCancels;
+        int cancelIndex = MIN(numCancels, [_cancelStrings count]);
+        newTitle = _cancelStrings[cancelIndex];
     }
+    NSLog(newTitle);
+    [_launchButton setTitle:newTitle forState:UIControlStateNormal];
 }
 
 @end
