@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property UIButton* launchButton;
 
 @end
 
