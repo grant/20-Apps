@@ -9,12 +9,11 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-            
 
 @end
 
 @implementation ViewController
-            
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -23,7 +22,7 @@
     CGFloat r = 221;
     CGFloat g = 86;
     CGFloat b = 70;
-    UIColor* bgColor = [UIColor colorWithRed:(r/255) green:(g/255) blue:(b/255) alpha:255];
+    UIColor *bgColor = [UIColor colorWithRed:(r/255) green:(g/255) blue:(b/255) alpha:255];
     self.view.backgroundColor = bgColor;
     
     // Launch button
@@ -33,12 +32,27 @@
     [_launchButton setTitle:@"Launch the missles!" forState:UIControlStateNormal];
     [_launchButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_launchButton setExclusiveTouch:YES];
+    [_launchButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_launchButton];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)buttonClick:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wait" message:@"Are you sure you want to launch the missles?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"YES!", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        // confirm
+        [_launchButton setTitle:@"Launch the missles (again)!" forState:UIControlStateNormal];
+    } else if (buttonIndex == 0) {
+        // cancel
+    }
 }
 
 @end

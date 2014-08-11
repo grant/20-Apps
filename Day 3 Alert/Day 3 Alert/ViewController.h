@@ -13,4 +13,3 @@
 @property UIButton* launchButton;
 
 @end
-
