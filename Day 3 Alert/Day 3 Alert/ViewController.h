@@ -11,6 +11,5 @@
 @interface ViewController : UIViewController
 
 @property UIButton* launchButton;
-@property NSArray* cancelStrings;
 
 @end

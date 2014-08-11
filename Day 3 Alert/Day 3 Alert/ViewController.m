@@ -67,17 +67,17 @@ static NSArray *cancelStrings;
         // confirm
         ++numLaunches;
         if (lastLaunchCancelled) {
-            newTitle = @"Thanks you!";
+            newTitle = @"Thank you!";
         } else {
             newTitle = @"Launch the missles (again)!";
         }
     } else if (buttonIndex == 0) {
         // cancel
+        int cancelIndex = MIN(numCancels, [cancelStrings count] - 1);
         ++numCancels;
-        int cancelIndex = MIN(numCancels, [_cancelStrings count]);
-        newTitle = _cancelStrings[cancelIndex];
+        newTitle = cancelStrings[cancelIndex];
     }
-    NSLog(newTitle);
+    lastLaunchCancelled = (buttonIndex == 0);
     [_launchButton setTitle:newTitle forState:UIControlStateNormal];
 }
 
