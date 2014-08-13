@@ -9,6 +9,7 @@ To become sufficiently good at anything you need **practice, lots of it**. This 
 - Day 1: Hello World
 - Day 2: Like
 - Day 3: Alert
+- Day 4: Clock
 
 ## Rules
 
