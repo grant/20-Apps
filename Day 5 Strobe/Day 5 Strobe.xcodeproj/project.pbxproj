@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		032812EC199BD85600F98DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 032812EB199BD85600F98DCB /* main.m */; };
+		032812EF199BD85600F98DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 032812EE199BD85600F98DCB /* AppDelegate.m */; };
+		032812F2199BD85600F98DCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032812F1199BD85600F98DCB /* ViewController.m */; };
+		032812F5199BD85600F98DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032812F3199BD85600F98DCB /* Main.storyboard */; };
+		032812F7199BD85600F98DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032812F6199BD85600F98DCB /* Images.xcassets */; };
+		03281303199BD85600F98DCB /* Day_5_StrobeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03281302199BD85600F98DCB /* Day_5_StrobeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		032812FD199BD85600F98DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032812DE199BD85600F98DCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 032812E5199BD85600F98DCB;
+			remoteInfo = "Day 5 Strobe";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		032812E6199BD85600F98DCB /* Day 5 Strobe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day 5 Strobe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		032812EA199BD85600F98DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		032812EB199BD85600F98DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		032812ED199BD85600F98DCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		032812EE199BD85600F98DCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		032812F0199BD85600F98DCB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		032812F1199BD85600F98DCB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		032812F4199BD85600F98DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		032812F6199BD85600F98DCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		032812FC199BD85600F98DCB /* Day 5 StrobeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Day 5 StrobeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03281301199BD85600F98DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03281302199BD85600F98DCB /* Day_5_StrobeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Day_5_StrobeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		032812E3199BD85600F98DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032812F9199BD85600F98DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		032812DD199BD85600F98DCB = {
+			isa = PBXGroup;
+			children = (
+				032812E8199BD85600F98DCB /* Day 5 Strobe */,
+				032812FF199BD85600F98DCB /* Day 5 StrobeTests */,
+				032812E7199BD85600F98DCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		032812E7199BD85600F98DCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				032812E6199BD85600F98DCB /* Day 5 Strobe.app */,
+				032812FC199BD85600F98DCB /* Day 5 StrobeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		032812E8199BD85600F98DCB /* Day 5 Strobe */ = {
+			isa = PBXGroup;
+			children = (
+				032812ED199BD85600F98DCB /* AppDelegate.h */,
+				032812EE199BD85600F98DCB /* AppDelegate.m */,
+				032812F0199BD85600F98DCB /* ViewController.h */,
+				032812F1199BD85600F98DCB /* ViewController.m */,
+				032812F3199BD85600F98DCB /* Main.storyboard */,
+				032812F6199BD85600F98DCB /* Images.xcassets */,
+				032812E9199BD85600F98DCB /* Supporting Files */,
+			);
+			path = "Day 5 Strobe";
+			sourceTree = "<group>";
+		};
+		032812E9199BD85600F98DCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				032812EA199BD85600F98DCB /* Info.plist */,
+				032812EB199BD85600F98DCB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		032812FF199BD85600F98DCB /* Day 5 StrobeTests */ = {
+			isa = PBXGroup;
+			children = (
+				03281302199BD85600F98DCB /* Day_5_StrobeTests.m */,
+				03281300199BD85600F98DCB /* Supporting Files */,
+			);
+			path = "Day 5 StrobeTests";
+			sourceTree = "<group>";
+		};
+		03281300199BD85600F98DCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03281301199BD85600F98DCB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		032812E5199BD85600F98DCB /* Day 5 Strobe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03281306199BD85600F98DCB /* Build configuration list for PBXNativeTarget "Day 5 Strobe" */;
+			buildPhases = (
+				032812E2199BD85600F98DCB /* Sources */,
+				032812E3199BD85600F98DCB /* Frameworks */,
+				032812E4199BD85600F98DCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Day 5 Strobe";
+			productName = "Day 5 Strobe";
+			productReference = 032812E6199BD85600F98DCB /* Day 5 Strobe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		032812FB199BD85600F98DCB /* Day 5 StrobeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03281309199BD85600F98DCB /* Build configuration list for PBXNativeTarget "Day 5 StrobeTests" */;
+			buildPhases = (
+				032812F8199BD85600F98DCB /* Sources */,
+				032812F9199BD85600F98DCB /* Frameworks */,
+				032812FA199BD85600F98DCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				032812FE199BD85600F98DCB /* PBXTargetDependency */,
+			);
+			name = "Day 5 StrobeTests";
+			productName = "Day 5 StrobeTests";
+			productReference = 032812FC199BD85600F98DCB /* Day 5 StrobeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		032812DE199BD85600F98DCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Grant Timmerman";
+				TargetAttributes = {
+					032812E5199BD85600F98DCB = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					032812FB199BD85600F98DCB = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 032812E5199BD85600F98DCB;
+					};
+				};
+			};
+			buildConfigurationList = 032812E1199BD85600F98DCB /* Build configuration list for PBXProject "Day 5 Strobe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 032812DD199BD85600F98DCB;
+			productRefGroup = 032812E7199BD85600F98DCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				032812E5199BD85600F98DCB /* Day 5 Strobe */,
+				032812FB199BD85600F98DCB /* Day 5 StrobeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		032812E4199BD85600F98DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032812F5199BD85600F98DCB /* Main.storyboard in Resources */,
+				032812F7199BD85600F98DCB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032812FA199BD85600F98DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		032812E2199BD85600F98DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032812F2199BD85600F98DCB /* ViewController.m in Sources */,
+				032812EF199BD85600F98DCB /* AppDelegate.m in Sources */,
+				032812EC199BD85600F98DCB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032812F8199BD85600F98DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03281303199BD85600F98DCB /* Day_5_StrobeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		032812FE199BD85600F98DCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 032812E5199BD85600F98DCB /* Day 5 Strobe */;
+			targetProxy = 032812FD199BD85600F98DCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		032812F3199BD85600F98DCB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				032812F4199BD85600F98DCB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03281304199BD85600F98DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		03281305199BD85600F98DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03281307199BD85600F98DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Day 5 Strobe/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03281308199BD85600F98DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Day 5 Strobe/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0328130A199BD85600F98DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Day 5 Strobe.app/Day 5 Strobe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Day 5 StrobeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		0328130B199BD85600F98DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Day 5 Strobe.app/Day 5 Strobe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Day 5 StrobeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		032812E1199BD85600F98DCB /* Build configuration list for PBXProject "Day 5 Strobe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03281304199BD85600F98DCB /* Debug */,
+				03281305199BD85600F98DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03281306199BD85600F98DCB /* Build configuration list for PBXNativeTarget "Day 5 Strobe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03281307199BD85600F98DCB /* Debug */,
+				03281308199BD85600F98DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03281309199BD85600F98DCB /* Build configuration list for PBXNativeTarget "Day 5 StrobeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0328130A199BD85600F98DCB /* Debug */,
+				0328130B199BD85600F98DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 032812DE199BD85600F98DCB /* Project object */;
+}
