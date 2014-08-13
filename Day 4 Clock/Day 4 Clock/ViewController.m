@@ -30,7 +30,7 @@ float lowAmount = 0.8; // 0-1, the lowest brightness percent
     [self.view setBackgroundColor:backgroundColor];
     
     // Setup label
-    [_timeLabel setFont:[UIFont systemFontOfSize:50]];
+    [_timeLabel setFont:[UIFont systemFontOfSize:80]];
     [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(update:) userInfo:nil repeats:YES];
     
     [self updateTime];
