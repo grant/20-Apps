@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03253EAF199AF73400183DFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03253EAE199AF73400183DFC /* main.m */; };
+		03253EB2199AF73400183DFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03253EB1199AF73400183DFC /* AppDelegate.m */; };
+		03253EB5199AF73400183DFC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03253EB4199AF73400183DFC /* ViewController.m */; };
+		03253EB8199AF73400183DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03253EB6199AF73400183DFC /* Main.storyboard */; };
+		03253EBA199AF73400183DFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03253EB9199AF73400183DFC /* Images.xcassets */; };
+		03253EC6199AF73400183DFC /* Day_4_ClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03253EC5199AF73400183DFC /* Day_4_ClockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03253EC0199AF73400183DFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03253EA1199AF73400183DFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03253EA8199AF73400183DFC;
+			remoteInfo = "Day 4 Clock";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03253EA9199AF73400183DFC /* Day 4 Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day 4 Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03253EAD199AF73400183DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03253EAE199AF73400183DFC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03253EB0199AF73400183DFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		03253EB1199AF73400183DFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		03253EB3199AF73400183DFC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		03253EB4199AF73400183DFC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		03253EB7199AF73400183DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03253EB9199AF73400183DFC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		03253EBF199AF73400183DFC /* Day 4 ClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Day 4 ClockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03253EC4199AF73400183DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03253EC5199AF73400183DFC /* Day_4_ClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Day_4_ClockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03253EA6199AF73400183DFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03253EBC199AF73400183DFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03253EA0199AF73400183DFC = {
+			isa = PBXGroup;
+			children = (
+				03253EAB199AF73400183DFC /* Day 4 Clock */,
+				03253EC2199AF73400183DFC /* Day 4 ClockTests */,
+				03253EAA199AF73400183DFC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03253EAA199AF73400183DFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03253EA9199AF73400183DFC /* Day 4 Clock.app */,
+				03253EBF199AF73400183DFC /* Day 4 ClockTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03253EAB199AF73400183DFC /* Day 4 Clock */ = {
+			isa = PBXGroup;
+			children = (
+				03253EB0199AF73400183DFC /* AppDelegate.h */,
+				03253EB1199AF73400183DFC /* AppDelegate.m */,
+				03253EB3199AF73400183DFC /* ViewController.h */,
+				03253EB4199AF73400183DFC /* ViewController.m */,
+				03253EB6199AF73400183DFC /* Main.storyboard */,
+				03253EB9199AF73400183DFC /* Images.xcassets */,
+				03253EAC199AF73400183DFC /* Supporting Files */,
+			);
+			path = "Day 4 Clock";
+			sourceTree = "<group>";
+		};
+		03253EAC199AF73400183DFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03253EAD199AF73400183DFC /* Info.plist */,
+				03253EAE199AF73400183DFC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03253EC2199AF73400183DFC /* Day 4 ClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				03253EC5199AF73400183DFC /* Day_4_ClockTests.m */,
+				03253EC3199AF73400183DFC /* Supporting Files */,
+			);
+			path = "Day 4 ClockTests";
+			sourceTree = "<group>";
+		};
+		03253EC3199AF73400183DFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03253EC4199AF73400183DFC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03253EA8199AF73400183DFC /* Day 4 Clock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03253EC9199AF73400183DFC /* Build configuration list for PBXNativeTarget "Day 4 Clock" */;
+			buildPhases = (
+				03253EA5199AF73400183DFC /* Sources */,
+				03253EA6199AF73400183DFC /* Frameworks */,
+				03253EA7199AF73400183DFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Day 4 Clock";
+			productName = "Day 4 Clock";
+			productReference = 03253EA9199AF73400183DFC /* Day 4 Clock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03253EBE199AF73400183DFC /* Day 4 ClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03253ECC199AF73400183DFC /* Build configuration list for PBXNativeTarget "Day 4 ClockTests" */;
+			buildPhases = (
+				03253EBB199AF73400183DFC /* Sources */,
+				03253EBC199AF73400183DFC /* Frameworks */,
+				03253EBD199AF73400183DFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03253EC1199AF73400183DFC /* PBXTargetDependency */,
+			);
+			name = "Day 4 ClockTests";
+			productName = "Day 4 ClockTests";
+			productReference = 03253EBF199AF73400183DFC /* Day 4 ClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03253EA1199AF73400183DFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Grant Timmerman";
+				TargetAttributes = {
+					03253EA8199AF73400183DFC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					03253EBE199AF73400183DFC = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 03253EA8199AF73400183DFC;
+					};
+				};
+			};
+			buildConfigurationList = 03253EA4199AF73400183DFC /* Build configuration list for PBXProject "Day 4 Clock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03253EA0199AF73400183DFC;
+			productRefGroup = 03253EAA199AF73400183DFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03253EA8199AF73400183DFC /* Day 4 Clock */,
+				03253EBE199AF73400183DFC /* Day 4 ClockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03253EA7199AF73400183DFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03253EB8199AF73400183DFC /* Main.storyboard in Resources */,
+				03253EBA199AF73400183DFC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03253EBD199AF73400183DFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03253EA5199AF73400183DFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03253EB5199AF73400183DFC /* ViewController.m in Sources */,
+				03253EB2199AF73400183DFC /* AppDelegate.m in Sources */,
+				03253EAF199AF73400183DFC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03253EBB199AF73400183DFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03253EC6199AF73400183DFC /* Day_4_ClockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03253EC1199AF73400183DFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03253EA8199AF73400183DFC /* Day 4 Clock */;
+			targetProxy = 03253EC0199AF73400183DFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03253EB6199AF73400183DFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03253EB7199AF73400183DFC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03253EC7199AF73400183DFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		03253EC8199AF73400183DFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03253ECA199AF73400183DFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Day 4 Clock/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03253ECB199AF73400183DFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Day 4 Clock/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03253ECD199AF73400183DFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Day 4 Clock.app/Day 4 Clock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Day 4 ClockTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		03253ECE199AF73400183DFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Day 4 Clock.app/Day 4 Clock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Day 4 ClockTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03253EA4199AF73400183DFC /* Build configuration list for PBXProject "Day 4 Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03253EC7199AF73400183DFC /* Debug */,
+				03253EC8199AF73400183DFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03253EC9199AF73400183DFC /* Build configuration list for PBXNativeTarget "Day 4 Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03253ECA199AF73400183DFC /* Debug */,
+				03253ECB199AF73400183DFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03253ECC199AF73400183DFC /* Build configuration list for PBXNativeTarget "Day 4 ClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03253ECD199AF73400183DFC /* Debug */,
+				03253ECE199AF73400183DFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03253EA1199AF73400183DFC /* Project object */;
+}
