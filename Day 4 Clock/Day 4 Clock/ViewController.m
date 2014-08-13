@@ -19,11 +19,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    // Set background
     float r = 252;
     float b = 42;
     float g = 29;
     UIColor *backgroundColor = [UIColor colorWithRed:r/255 green:g/255 blue:b/255 alpha:255];
     [self.view setBackgroundColor:backgroundColor];
+    
+    // Setup label
+    [_timeLabel setFont:[UIFont systemFontOfSize:100]];
+    
+    NSDate *date = [NSDate date];
+    NSLog(@"%@", date);
 }
 
 - (void)didReceiveMemoryWarning {
