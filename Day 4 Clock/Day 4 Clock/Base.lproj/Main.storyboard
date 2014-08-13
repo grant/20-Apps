@@ -22,7 +22,7 @@
                                 <color key="textColor" red="1" green="0.85005463162317163" blue="0.86602942156772222" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="28" y="179" width="265" height="121"/>
+                                    <rect key="frame" x="0.0" y="129" width="320" height="222"/>
                                 </variation>
                             </label>
                         </subviews>
