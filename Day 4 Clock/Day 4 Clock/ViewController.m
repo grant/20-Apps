@@ -30,7 +30,11 @@
     [_timeLabel setFont:[UIFont systemFontOfSize:100]];
     
     NSDate *date = [NSDate date];
-    NSLog(@"%@", date);
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    NSString *localeFormatString = [NSDateFormatter dateFormatFromTemplate:@"hh:mm:ss" options:0 locale:dateFormatter.locale];
+    [dateFormatter setDateFormat:localeFormatString];
+    NSString *localizedString = [dateFormatter stringFromDate:date];
+    [_timeLabel setText:localizedString];
 }
 
 - (void)didReceiveMemoryWarning {
