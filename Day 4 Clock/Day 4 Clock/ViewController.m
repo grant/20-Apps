@@ -27,19 +27,27 @@
     [self.view setBackgroundColor:backgroundColor];
     
     // Setup label
-    [_timeLabel setFont:[UIFont systemFontOfSize:100]];
+    [_timeLabel setFont:[UIFont systemFontOfSize:50]];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(update:) userInfo:nil repeats:YES];
     
-    NSDate *date = [NSDate date];
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    NSString *localeFormatString = [NSDateFormatter dateFormatFromTemplate:@"hh:mm:ss" options:0 locale:dateFormatter.locale];
-    [dateFormatter setDateFormat:localeFormatString];
-    NSString *localizedString = [dateFormatter stringFromDate:date];
-    [_timeLabel setText:localizedString];
+    [self updateTime];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Timer handler
+- (void)update:(id)sender {
+    [self updateTime];
+}
+
+// Updates the UI time
+- (void)updateTime {
+    NSDate *date = [NSDate date];
+    NSString *time = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle];
+    [_timeLabel setText:time];
 }
 
 @end
