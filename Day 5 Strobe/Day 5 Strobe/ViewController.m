@@ -19,6 +19,7 @@
 float sliderValue = 0.5;
 bool lightAvailable;
 AVCaptureDevice *light;
+NSDate *lastSwitchDate; // The last time we switched the light from 'on' to 'off', or vice-versa
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,8 +36,9 @@ AVCaptureDevice *light;
     [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
     
     // Setup strobelight
-    [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(strobeUpdate:) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(strobeUpdate:) userInfo:nil repeats:YES];
     lightAvailable = (NSClassFromString(@"AVCaptureDevice") != nil);
+    lastSwitchDate = [NSDate date];
     if (lightAvailable) {
         light = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         lightAvailable = ([light hasTorch] && [light hasFlash]);
@@ -50,15 +52,25 @@ AVCaptureDevice *light;
 
 - (IBAction) sliderValueChanged:(UISlider *)sender {
     sliderValue = [sender value];
-//    NSLog(@"%@", [NSString stringWithFormat:@"%.2f", [sender value]]);
 }
 
 - (void)strobeUpdate:(id)sender {
     if (lightAvailable) {
-        if ([self lightIsOn]) {
-            [self turnOffLight];
-        } else {
-            [self turnOnLight];
+        // Calculate if the light should be on or off based on the date
+        int frequency = 200; // number of milliseconds between switches
+        NSDate *currentDate = [NSDate date];
+        long long difference = ([currentDate timeIntervalSince1970] * 1000) - ([lastSwitchDate timeIntervalSince1970] * 1000);
+
+        // If should switch
+        if (difference > frequency) {
+            bool lightShouldBeOn = ![self lightIsOn];
+            // Update it
+            if (lightShouldBeOn) {
+                [self turnOnLight];
+            } else {
+                [self turnOffLight];
+            }
+            lastSwitchDate = currentDate;
         }
     }
 }
