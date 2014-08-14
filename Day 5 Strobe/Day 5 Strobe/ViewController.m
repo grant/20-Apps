@@ -58,8 +58,8 @@ NSDate *lastSwitchDate; // The last time we switched the light from 'on' to 'off
     if (lightAvailable) {
         // Calculate if the light should be on or off based on the date
         // number of milliseconds between switches
-        int frequency = 1000 * (sliderValue * sliderValue);
-        if (sliderValue == 1) {
+        int frequency = 1000 * pow(1 - sliderValue, 2);
+        if (sliderValue == 0) {
             frequency = INFINITY;
         }
         NSDate *currentDate = [NSDate date];
