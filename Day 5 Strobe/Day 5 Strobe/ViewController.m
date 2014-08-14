@@ -14,7 +14,7 @@
 @end
 
 @implementation ViewController
-            
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -25,11 +25,18 @@
     float g = 29;
     UIColor *backgroundColor = [UIColor colorWithRed:r/255 green:g/255 blue:b/255 alpha:255];
     [self.view setBackgroundColor:backgroundColor];
+    
+    // Setup slider
+    [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction) sliderValueChanged:(UISlider *)sender {
+    NSLog(@"%@", [NSString stringWithFormat:@"%.2f", [sender value]]);
 }
 
 @end
