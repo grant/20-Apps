@@ -57,7 +57,11 @@ NSDate *lastSwitchDate; // The last time we switched the light from 'on' to 'off
 - (void)strobeUpdate:(id)sender {
     if (lightAvailable) {
         // Calculate if the light should be on or off based on the date
-        int frequency = 200; // number of milliseconds between switches
+        // number of milliseconds between switches
+        int frequency = 1000 * (sliderValue * sliderValue);
+        if (sliderValue == 1) {
+            frequency = INFINITY;
+        }
         NSDate *currentDate = [NSDate date];
         long long difference = ([currentDate timeIntervalSince1970] * 1000) - ([lastSwitchDate timeIntervalSince1970] * 1000);
 
