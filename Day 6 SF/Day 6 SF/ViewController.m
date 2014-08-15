@@ -83,4 +83,17 @@
     return [location1 distanceFromLocation:location2]/1000;
 }
 
+#define degreesToRadians(x) (M_PI * x / 180.0)
+#define radiandsToDegrees(x) (x * 180.0 / M_PI)
+
+// Gets the bearing between two points
+- (float)getHeadingForDirectionFromCoordinate:(CLLocationCoordinate2D)fromLoc toCoordinate:(CLLocationCoordinate2D)toLoc {
+    float fLat = degreesToRadians(fromLoc.latitude);
+    float fLng = degreesToRadians(fromLoc.longitude);
+    float tLat = degreesToRadians(toLoc.latitude);
+    float tLng = degreesToRadians(toLoc.longitude);
+    float degree = radiandsToDegrees(atan2(sin(tLng-fLng)*cos(tLat), cos(fLat)*sin(tLat)-sin(fLat)*cos(tLat)*cos(tLng-fLng)));
+    return (degree >= 0) ? degree : 360 + degree;
+}
+
 @end
