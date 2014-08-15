@@ -71,7 +71,7 @@
 - (CLLocationDistance)getDistanceFromSF {
     float sfLat = 1;
     float sfLong = 1;
-    CLLocationCoordinate2D yourCoordinate = CLLocationCoordinate2DMake(sfLat, sfLong);
+    CLLocationCoordinate2D yourCoordinate = [self getLocation];
     CLLocationCoordinate2D sfCoordinate = CLLocationCoordinate2DMake(sfLat, sfLong);
     return [self distanceBetweenCoordinates:yourCoordinate otherCoord:sfCoordinate];
 }
@@ -81,6 +81,18 @@
     CLLocation *location1 = [[CLLocation alloc] initWithLatitude:coord1.latitude longitude:coord1.longitude];
     CLLocation *location2 = [[CLLocation alloc] initWithLatitude:coord2.latitude longitude:coord2.longitude];
     return [location1 distanceFromLocation:location2]/1000;
+}
+
+// Gets the current location of the user
+- (CLLocationCoordinate2D) getLocation {
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    [locationManager startUpdatingLocation];
+    CLLocation *location = [locationManager location];
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    
+    return coordinate;
 }
 
 #define degreesToRadians(x) (M_PI * x / 180.0)
