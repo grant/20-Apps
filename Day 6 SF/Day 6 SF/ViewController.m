@@ -44,11 +44,11 @@
     [self.view addSubview:_distanceLabel];
     
     // Direction label
-    CGRect directionFrame = CGRectMake(0, 300, self.view.frame.size.width, 100);
+    CGRect directionFrame = CGRectMake(0, 260, self.view.frame.size.width, 100);
     _directionLabel = [[UILabel alloc] initWithFrame:directionFrame];
     [_directionLabel setTextColor:[UIColor whiteColor]];
     [_directionLabel setTextAlignment:NSTextAlignmentCenter];
-    [_directionLabel setFont:[UIFont systemFontOfSize:10]];
+    [_directionLabel setFont:[UIFont systemFontOfSize:20]];
     [self.view addSubview:_directionLabel];
     
     // Update distance
@@ -64,7 +64,10 @@
 - (void)updateText {
     float distanceFromSF = [self getDistanceFromSF];
     NSString *distanceText = [NSString stringWithFormat:@"%.2f", distanceFromSF];
+    NSString *compassDirectionString = @"North";
+    NSString *directionText = [NSString stringWithFormat:@"miles %@ from San Francisco.", compassDirectionString];
     [_distanceLabel setText:distanceText];
+    [_directionLabel setText:directionText];
 }
 
 // Gets the distance from the user's location and SF
