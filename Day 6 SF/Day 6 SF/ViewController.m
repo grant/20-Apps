@@ -15,7 +15,11 @@
 @end
 
 @implementation ViewController
-            
+
+float sfLat = 37.775;
+float sfLong = -122.4183333;
+CLLocationCoordinate2D sfCoordinate;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -52,6 +56,7 @@
     [self.view addSubview:_directionLabel];
         
     // Update location
+    sfCoordinate = CLLocationCoordinate2DMake(sfLat, sfLong);
     [self updateCurrentLocation];
 }
 
@@ -62,9 +67,6 @@
 
 // Gets the distance from the user's location and SF
 - (CLLocationDistance)getDistanceFromSF:(CLLocationCoordinate2D)origin {
-    float sfLat = 37.775;
-    float sfLong = -122.4183333;
-    CLLocationCoordinate2D sfCoordinate = CLLocationCoordinate2DMake(sfLat, sfLong);
     return [self distanceBetweenCoordinates:origin otherCoord:sfCoordinate];
 }
 
@@ -88,13 +90,11 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     float distanceFromSF = [self getDistanceFromSF:newLocation.coordinate];
     NSString *distanceText = [NSString stringWithFormat:@"%.2f", distanceFromSF];
+    float compassBearing = [self getHeadingForDirectionFromCoordinate:sfCoordinate toCoordinate:newLocation.coordinate];
     NSString *compassDirectionString = @"North";
     NSString *directionText = [NSString stringWithFormat:@"miles %@ from San Francisco.", compassDirectionString];
     [_distanceLabel setText:distanceText];
     [_directionLabel setText:directionText];
-
-    NSLog(@"OldLocation %f %f", oldLocation.coordinate.latitude, oldLocation.coordinate.longitude);
-    NSLog(@"NewLocation %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
 }
 
 #define degreesToRadians(x) (M_PI * x / 180.0)
