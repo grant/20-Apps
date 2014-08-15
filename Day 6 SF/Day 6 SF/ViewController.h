@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
+@property (nonatomic, weak) IBOutlet UILabel *directionLabel;
 
 @end
 
