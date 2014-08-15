@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface ViewController ()
             
@@ -26,22 +27,60 @@
     [self.view setBackgroundColor:backgroundColor];
     
     // Title label
-    CGRect frame = CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.width);
-    _directionLabel = [[UILabel alloc] initWithFrame:frame];
-    [_directionLabel setText:@"You are"];
-    [_directionLabel setTextAlignment:NSTextAlignmentCenter];
-    [_directionLabel setTextColor:[UIColor whiteColor]];
-    [_directionLabel setFont:[UIFont systemFontOfSize:30]];
-    [self.view addSubview:_directionLabel];
+    CGRect titleFrame = CGRectMake(0, 85, self.view.frame.size.width, 100);
+    _titleLabel = [[UILabel alloc] initWithFrame:titleFrame];
+    [_titleLabel setText:@"You are"];
+    [_titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [_titleLabel setTextColor:[UIColor whiteColor]];
+    [_titleLabel setFont:[UIFont systemFontOfSize:40]];
+    [self.view addSubview:_titleLabel];
     
     // Distance label
+    CGRect distanceFrame = CGRectMake(0, 180, self.view.frame.size.width, 100);
+    _distanceLabel = [[UILabel alloc] initWithFrame:distanceFrame];
+    [_distanceLabel setTextColor:[UIColor whiteColor]];
+    [_distanceLabel setTextAlignment:NSTextAlignmentCenter];
+    [_distanceLabel setFont:[UIFont systemFontOfSize:70]];
+    [self.view addSubview:_distanceLabel];
     
     // Direction label
+    CGRect directionFrame = CGRectMake(0, 300, self.view.frame.size.width, 100);
+    _directionLabel = [[UILabel alloc] initWithFrame:directionFrame];
+    [_directionLabel setTextColor:[UIColor whiteColor]];
+    [_directionLabel setTextAlignment:NSTextAlignmentCenter];
+    [_directionLabel setFont:[UIFont systemFontOfSize:10]];
+    [self.view addSubview:_directionLabel];
+    
+    // Update distance
+    [self updateText];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Updates the text with the latest distance data
+- (void)updateText {
+    float distanceFromSF = [self getDistanceFromSF];
+    NSString *distanceText = [NSString stringWithFormat:@"%.2f", distanceFromSF];
+    [_distanceLabel setText:distanceText];
+}
+
+// Gets the distance from the user's location and SF
+- (CLLocationDistance)getDistanceFromSF {
+    float sfLat = 1;
+    float sfLong = 1;
+    CLLocationCoordinate2D yourCoordinate = CLLocationCoordinate2DMake(sfLat, sfLong);
+    CLLocationCoordinate2D sfCoordinate = CLLocationCoordinate2DMake(sfLat, sfLong);
+    return [self distanceBetweenCoordinates:yourCoordinate otherCoord:sfCoordinate];
+}
+
+// Gets the distance between two coordinates in km
+- (CLLocationDistance)distanceBetweenCoordinates:(CLLocationCoordinate2D)coord1 otherCoord:(CLLocationCoordinate2D)coord2 {
+    CLLocation *location1 = [[CLLocation alloc] initWithLatitude:coord1.latitude longitude:coord1.longitude];
+    CLLocation *location2 = [[CLLocation alloc] initWithLatitude:coord2.latitude longitude:coord2.longitude];
+    return [location1 distanceFromLocation:location2]/1000;
 }
 
 @end
