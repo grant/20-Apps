@@ -16,6 +16,10 @@
 
 @implementation ViewController
 
+#define degreesToRadians(x) (M_PI * x / 180.0)
+#define radiansToDegrees(x) (x * 180.0 / M_PI)
+#define kmToMiles(km) (km * 0.6214)
+
 float sfLat = 37.775;
 float sfLong = -122.4183333;
 CLLocationCoordinate2D sfCoordinate;
@@ -67,7 +71,7 @@ CLLocationCoordinate2D sfCoordinate;
 
 // Gets the distance from the user's location and SF
 - (CLLocationDistance)getDistanceFromSF:(CLLocationCoordinate2D)origin {
-    return [self distanceBetweenCoordinates:origin otherCoord:sfCoordinate];
+    return kmToMiles([self distanceBetweenCoordinates:origin otherCoord:sfCoordinate]);
 }
 
 // Gets the distance between two coordinates in km
@@ -91,14 +95,11 @@ CLLocationCoordinate2D sfCoordinate;
     float distanceFromSF = [self getDistanceFromSF:newLocation.coordinate];
     NSString *distanceText = [NSString stringWithFormat:@"%.2f", distanceFromSF];
     float compassBearing = [self getHeadingForDirectionFromCoordinate:sfCoordinate toCoordinate:newLocation.coordinate];
-    NSString *compassDirectionString = @"North";
+    NSString *compassDirectionString = [self getCompassDirection:compassBearing];
     NSString *directionText = [NSString stringWithFormat:@"miles %@ from San Francisco.", compassDirectionString];
     [_distanceLabel setText:distanceText];
     [_directionLabel setText:directionText];
 }
-
-#define degreesToRadians(x) (M_PI * x / 180.0)
-#define radiandsToDegrees(x) (x * 180.0 / M_PI)
 
 // Gets the bearing between two points
 - (float)getHeadingForDirectionFromCoordinate:(CLLocationCoordinate2D)fromLoc toCoordinate:(CLLocationCoordinate2D)toLoc {
@@ -106,8 +107,19 @@ CLLocationCoordinate2D sfCoordinate;
     float fLng = degreesToRadians(fromLoc.longitude);
     float tLat = degreesToRadians(toLoc.latitude);
     float tLng = degreesToRadians(toLoc.longitude);
-    float degree = radiandsToDegrees(atan2(sin(tLng-fLng)*cos(tLat), cos(fLat)*sin(tLat)-sin(fLat)*cos(tLat)*cos(tLng-fLng)));
+    float degree = radiansToDegrees(atan2(sin(tLng-fLng)*cos(tLat), cos(fLat)*sin(tLat)-sin(fLat)*cos(tLat)*cos(tLng-fLng)));
     return (degree >= 0) ? degree : 360 + degree;
+}
+
+// Gets the compass direction from the bearing
+- (NSString*)getCompassDirection:(float)bearing {
+    NSArray *directions = @[@"NE", @"E", @"SE", @"S", @"SW", @"W", @"NW", @"N"];
+    float indexFloat = bearing - 22.5;
+    if (indexFloat < 0) {
+        indexFloat += 360;
+    }
+    int index = floorf(indexFloat / 45);
+    return directions[index];
 }
 
 @end
