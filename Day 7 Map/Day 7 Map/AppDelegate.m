@@ -18,6 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+        UIStoryboard *storyBoard;
+        
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        CGFloat scale = [UIScreen mainScreen].scale;
+        result = CGSizeMake(result.width * scale, result.height * scale);
+        
+        if (result.height == 1136) {
+            storyBoard = [UIStoryboard storyboardWithName:@"Main5" bundle:nil];
+            UIViewController *initViewController = [storyBoard instantiateInitialViewController];
+            [self.window setRootViewController:initViewController];
+        }
+    }
     return YES;
 }
 

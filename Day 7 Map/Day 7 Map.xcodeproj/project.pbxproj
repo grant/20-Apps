@@ -14,6 +14,7 @@
 		036CC4F9199E7B1500319EE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036CC4F8199E7B1500319EE6 /* Images.xcassets */; };
 		036CC505199E7B1500319EE6 /* Day_7_MapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 036CC504199E7B1500319EE6 /* Day_7_MapTests.m */; };
 		036CC50F199E7BB900319EE6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036CC50E199E7BB900319EE6 /* MapKit.framework */; };
+		036CC512199E7E9100319EE6 /* Main5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036CC510199E7E9100319EE6 /* Main5.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		036CC503199E7B1500319EE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036CC504199E7B1500319EE6 /* Day_7_MapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Day_7_MapTests.m; sourceTree = "<group>"; };
 		036CC50E199E7BB900319EE6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		036CC511199E7E9100319EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main5.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				036CC4F2199E7B1500319EE6 /* ViewController.h */,
 				036CC4F3199E7B1500319EE6 /* ViewController.m */,
 				036CC4F5199E7B1500319EE6 /* Main.storyboard */,
+				036CC510199E7E9100319EE6 /* Main5.storyboard */,
 				036CC4F8199E7B1500319EE6 /* Images.xcassets */,
 				036CC4EB199E7B1500319EE6 /* Supporting Files */,
 			);
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				036CC4F7199E7B1500319EE6 /* Main.storyboard in Resources */,
+				036CC512199E7E9100319EE6 /* Main5.storyboard in Resources */,
 				036CC4F9199E7B1500319EE6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +254,14 @@
 				036CC4F6199E7B1500319EE6 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		036CC510199E7E9100319EE6 /* Main5.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				036CC511199E7E9100319EE6 /* Base */,
+			);
+			name = Main5.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
