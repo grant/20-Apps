@@ -11,6 +11,7 @@ To become sufficiently good at anything you need **practice, lots of it**. This 
 - Day 3: Alert
 - Day 4: Clock
 - Day 5: Strobe
+- Day 6: SF
 
 ## Rules
 

@@ -68,7 +68,7 @@ CLLocationCoordinate2D sfCoordinate;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+    
 // Gets the distance from the user's location and SF
 - (CLLocationDistance)getDistanceFromSF:(CLLocationCoordinate2D)origin {
     return kmToMiles([self distanceBetweenCoordinates:origin otherCoord:sfCoordinate]);
