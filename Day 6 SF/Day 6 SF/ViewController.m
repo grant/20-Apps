@@ -50,9 +50,9 @@
     [_directionLabel setTextAlignment:NSTextAlignmentCenter];
     [_directionLabel setFont:[UIFont systemFontOfSize:20]];
     [self.view addSubview:_directionLabel];
-    
-    // Update distance
-    [self updateText];
+        
+    // Update location
+    [self updateCurrentLocation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,23 +60,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Updates the text with the latest distance data
-- (void)updateText {
-    float distanceFromSF = [self getDistanceFromSF];
-    NSString *distanceText = [NSString stringWithFormat:@"%.2f", distanceFromSF];
-    NSString *compassDirectionString = @"North";
-    NSString *directionText = [NSString stringWithFormat:@"miles %@ from San Francisco.", compassDirectionString];
-    [_distanceLabel setText:distanceText];
-    [_directionLabel setText:directionText];
-}
-
 // Gets the distance from the user's location and SF
-- (CLLocationDistance)getDistanceFromSF {
-    float sfLat = 1;
-    float sfLong = 1;
-    CLLocationCoordinate2D yourCoordinate = [self getLocation];
+- (CLLocationDistance)getDistanceFromSF:(CLLocationCoordinate2D)origin {
+    float sfLat = 37.775;
+    float sfLong = -122.4183333;
     CLLocationCoordinate2D sfCoordinate = CLLocationCoordinate2DMake(sfLat, sfLong);
-    return [self distanceBetweenCoordinates:yourCoordinate otherCoord:sfCoordinate];
+    return [self distanceBetweenCoordinates:origin otherCoord:sfCoordinate];
 }
 
 // Gets the distance between two coordinates in km
@@ -86,16 +75,26 @@
     return [location1 distanceFromLocation:location2]/1000;
 }
 
-// Gets the current location of the user
-- (CLLocationCoordinate2D) getLocation {
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    locationManager.distanceFilter = kCLDistanceFilterNone;
-    [locationManager startUpdatingLocation];
-    CLLocation *location = [locationManager location];
-    CLLocationCoordinate2D coordinate = [location coordinate];
-    
-    return coordinate;
+// Starts updates of the current location of the user
+- (void) updateCurrentLocation {
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    _locationManager.distanceFilter = kCLDistanceFilterNone;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [_locationManager startUpdatingLocation];
+}
+
+// Location update manager
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    float distanceFromSF = [self getDistanceFromSF:newLocation.coordinate];
+    NSString *distanceText = [NSString stringWithFormat:@"%.2f", distanceFromSF];
+    NSString *compassDirectionString = @"North";
+    NSString *directionText = [NSString stringWithFormat:@"miles %@ from San Francisco.", compassDirectionString];
+    [_distanceLabel setText:distanceText];
+    [_directionLabel setText:directionText];
+
+    NSLog(@"OldLocation %f %f", oldLocation.coordinate.latitude, oldLocation.coordinate.longitude);
+    NSLog(@"NewLocation %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
 }
 
 #define degreesToRadians(x) (M_PI * x / 180.0)
