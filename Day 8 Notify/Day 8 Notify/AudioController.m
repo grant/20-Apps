@@ -27,6 +27,7 @@
     return self;
 }
 
+// Plays a sound given the sound id
 - (void)playSystemSound:(NSString*)sound {
     if ([sound isEqual: @"note"]) {
         AudioServicesPlaySystemSound(self.noteSound);
@@ -37,6 +38,7 @@
     }
 }
 
+// Sets up the sounds
 - (void)configureSystemSound {
     NSArray *soundNames = @[@"note", @"hillside", @"chord"];
     for (NSString *sound in soundNames) {

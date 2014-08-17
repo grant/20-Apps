@@ -34,6 +34,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Button handlers
 - (IBAction)handleNoteClick:(id)sender {
     [self.audioController playSystemSound:@"note"];
 }
