@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03737C3D19A0857E0044DAFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03737C3C19A0857E0044DAFF /* main.m */; };
+		03737C4019A0857E0044DAFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03737C3F19A0857E0044DAFF /* AppDelegate.m */; };
+		03737C4319A0857E0044DAFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03737C4219A0857E0044DAFF /* ViewController.m */; };
+		03737C4619A0857E0044DAFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03737C4419A0857E0044DAFF /* Main.storyboard */; };
+		03737C4819A0857E0044DAFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03737C4719A0857E0044DAFF /* Images.xcassets */; };
+		03737C5419A0857F0044DAFF /* Day_8_NotifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03737C5319A0857F0044DAFF /* Day_8_NotifyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03737C4E19A0857F0044DAFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03737C2F19A0857E0044DAFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03737C3619A0857E0044DAFF;
+			remoteInfo = "Day 8 Notify";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03737C3719A0857E0044DAFF /* Day 8 Notify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day 8 Notify.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03737C3B19A0857E0044DAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03737C3C19A0857E0044DAFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03737C3E19A0857E0044DAFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		03737C3F19A0857E0044DAFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		03737C4119A0857E0044DAFF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		03737C4219A0857E0044DAFF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		03737C4519A0857E0044DAFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03737C4719A0857E0044DAFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		03737C4D19A0857F0044DAFF /* Day 8 NotifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Day 8 NotifyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03737C5219A0857F0044DAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03737C5319A0857F0044DAFF /* Day_8_NotifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Day_8_NotifyTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03737C3419A0857E0044DAFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03737C4A19A0857F0044DAFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03737C2E19A0857E0044DAFF = {
+			isa = PBXGroup;
+			children = (
+				03737C3919A0857E0044DAFF /* Day 8 Notify */,
+				03737C5019A0857F0044DAFF /* Day 8 NotifyTests */,
+				03737C3819A0857E0044DAFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03737C3819A0857E0044DAFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03737C3719A0857E0044DAFF /* Day 8 Notify.app */,
+				03737C4D19A0857F0044DAFF /* Day 8 NotifyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03737C3919A0857E0044DAFF /* Day 8 Notify */ = {
+			isa = PBXGroup;
+			children = (
+				03737C3E19A0857E0044DAFF /* AppDelegate.h */,
+				03737C3F19A0857E0044DAFF /* AppDelegate.m */,
+				03737C4119A0857E0044DAFF /* ViewController.h */,
+				03737C4219A0857E0044DAFF /* ViewController.m */,
+				03737C4419A0857E0044DAFF /* Main.storyboard */,
+				03737C4719A0857E0044DAFF /* Images.xcassets */,
+				03737C3A19A0857E0044DAFF /* Supporting Files */,
+			);
+			path = "Day 8 Notify";
+			sourceTree = "<group>";
+		};
+		03737C3A19A0857E0044DAFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03737C3B19A0857E0044DAFF /* Info.plist */,
+				03737C3C19A0857E0044DAFF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03737C5019A0857F0044DAFF /* Day 8 NotifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				03737C5319A0857F0044DAFF /* Day_8_NotifyTests.m */,
+				03737C5119A0857F0044DAFF /* Supporting Files */,
+			);
+			path = "Day 8 NotifyTests";
+			sourceTree = "<group>";
+		};
+		03737C5119A0857F0044DAFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03737C5219A0857F0044DAFF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03737C3619A0857E0044DAFF /* Day 8 Notify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03737C5719A0857F0044DAFF /* Build configuration list for PBXNativeTarget "Day 8 Notify" */;
+			buildPhases = (
+				03737C3319A0857E0044DAFF /* Sources */,
+				03737C3419A0857E0044DAFF /* Frameworks */,
+				03737C3519A0857E0044DAFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Day 8 Notify";
+			productName = "Day 8 Notify";
+			productReference = 03737C3719A0857E0044DAFF /* Day 8 Notify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03737C4C19A0857F0044DAFF /* Day 8 NotifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03737C5A19A0857F0044DAFF /* Build configuration list for PBXNativeTarget "Day 8 NotifyTests" */;
+			buildPhases = (
+				03737C4919A0857F0044DAFF /* Sources */,
+				03737C4A19A0857F0044DAFF /* Frameworks */,
+				03737C4B19A0857F0044DAFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03737C4F19A0857F0044DAFF /* PBXTargetDependency */,
+			);
+			name = "Day 8 NotifyTests";
+			productName = "Day 8 NotifyTests";
+			productReference = 03737C4D19A0857F0044DAFF /* Day 8 NotifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03737C2F19A0857E0044DAFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Grant Timmerman";
+				TargetAttributes = {
+					03737C3619A0857E0044DAFF = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					03737C4C19A0857F0044DAFF = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 03737C3619A0857E0044DAFF;
+					};
+				};
+			};
+			buildConfigurationList = 03737C3219A0857E0044DAFF /* Build configuration list for PBXProject "Day 8 Notify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03737C2E19A0857E0044DAFF;
+			productRefGroup = 03737C3819A0857E0044DAFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03737C3619A0857E0044DAFF /* Day 8 Notify */,
+				03737C4C19A0857F0044DAFF /* Day 8 NotifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03737C3519A0857E0044DAFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03737C4619A0857E0044DAFF /* Main.storyboard in Resources */,
+				03737C4819A0857E0044DAFF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03737C4B19A0857F0044DAFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03737C3319A0857E0044DAFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03737C4319A0857E0044DAFF /* ViewController.m in Sources */,
+				03737C4019A0857E0044DAFF /* AppDelegate.m in Sources */,
+				03737C3D19A0857E0044DAFF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03737C4919A0857F0044DAFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03737C5419A0857F0044DAFF /* Day_8_NotifyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03737C4F19A0857F0044DAFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03737C3619A0857E0044DAFF /* Day 8 Notify */;
+			targetProxy = 03737C4E19A0857F0044DAFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03737C4419A0857E0044DAFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03737C4519A0857E0044DAFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03737C5519A0857F0044DAFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		03737C5619A0857F0044DAFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03737C5819A0857F0044DAFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Day 8 Notify/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03737C5919A0857F0044DAFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Day 8 Notify/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03737C5B19A0857F0044DAFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Day 8 Notify.app/Day 8 Notify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Day 8 NotifyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		03737C5C19A0857F0044DAFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Day 8 Notify.app/Day 8 Notify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Day 8 NotifyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03737C3219A0857E0044DAFF /* Build configuration list for PBXProject "Day 8 Notify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03737C5519A0857F0044DAFF /* Debug */,
+				03737C5619A0857F0044DAFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03737C5719A0857F0044DAFF /* Build configuration list for PBXNativeTarget "Day 8 Notify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03737C5819A0857F0044DAFF /* Debug */,
+				03737C5919A0857F0044DAFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03737C5A19A0857F0044DAFF /* Build configuration list for PBXNativeTarget "Day 8 NotifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03737C5B19A0857F0044DAFF /* Debug */,
+				03737C5C19A0857F0044DAFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03737C2F19A0857E0044DAFF /* Project object */;
+}
