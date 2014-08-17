@@ -14,6 +14,9 @@
 		03737C4819A0857E0044DAFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03737C4719A0857E0044DAFF /* Images.xcassets */; };
 		03737C5419A0857F0044DAFF /* Day_8_NotifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03737C5319A0857F0044DAFF /* Day_8_NotifyTests.m */; };
 		03737C5F19A08EF90044DAFF /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03737C5E19A08EF90044DAFF /* AudioController.m */; };
+		03737C6419A099570044DAFF /* chord.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03737C6119A099570044DAFF /* chord.wav */; };
+		03737C6519A099570044DAFF /* hillside.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03737C6219A099570044DAFF /* hillside.wav */; };
+		03737C6619A099570044DAFF /* note.wav in Resources */ = {isa = PBXBuildFile; fileRef = 03737C6319A099570044DAFF /* note.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,9 @@
 		03737C5319A0857F0044DAFF /* Day_8_NotifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Day_8_NotifyTests.m; sourceTree = "<group>"; };
 		03737C5D19A08ED40044DAFF /* AudioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		03737C5E19A08EF90044DAFF /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		03737C6119A099570044DAFF /* chord.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chord.wav; sourceTree = "<group>"; };
+		03737C6219A099570044DAFF /* hillside.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hillside.wav; sourceTree = "<group>"; };
+		03737C6319A099570044DAFF /* note.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		03737C2E19A0857E0044DAFF = {
 			isa = PBXGroup;
 			children = (
+				03737C6019A098F20044DAFF /* Resources */,
 				03737C3919A0857E0044DAFF /* Day 8 Notify */,
 				03737C5019A0857F0044DAFF /* Day 8 NotifyTests */,
 				03737C3819A0857E0044DAFF /* Products */,
@@ -119,6 +126,16 @@
 				03737C5219A0857F0044DAFF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03737C6019A098F20044DAFF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03737C6119A099570044DAFF /* chord.wav */,
+				03737C6219A099570044DAFF /* hillside.wav */,
+				03737C6319A099570044DAFF /* note.wav */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +218,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03737C6419A099570044DAFF /* chord.wav in Resources */,
+				03737C6519A099570044DAFF /* hillside.wav in Resources */,
+				03737C6619A099570044DAFF /* note.wav in Resources */,
 				03737C4619A0857E0044DAFF /* Main.storyboard in Resources */,
 				03737C4819A0857E0044DAFF /* Images.xcassets in Resources */,
 			);
