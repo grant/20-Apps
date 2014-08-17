@@ -31,8 +31,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)handleButtonClick:(id)sender {
-    NSLog(@"hi");
+- (IBAction)handleNoteClick:(id)sender {
+}
+- (IBAction)handleHillsideClick:(id)sender {
+}
+- (IBAction)handleChordClick:(id)sender {
 }
 
 @end
