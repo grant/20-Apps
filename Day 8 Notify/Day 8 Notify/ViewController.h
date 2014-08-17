@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *noteButton;
+@property (strong, nonatomic) IBOutlet UIView *hillsideButton;
+@property (strong, nonatomic) IBOutlet UIView *chordButton;
 
 @end
 
