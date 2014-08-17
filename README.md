@@ -13,6 +13,7 @@ To become sufficiently good at anything you need **practice, lots of it**. This 
 - Day 5: Strobe
 - Day 6: SF
 - Day 7: Map
+- Day 8: Notify
 
 ## Rules
 
