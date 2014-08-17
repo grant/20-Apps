@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "AudioController.h"
 
 @interface ViewController ()
-            
+
+@property (strong, nonatomic) AudioController *audioController;
 
 @end
 
@@ -17,7 +19,8 @@
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.audioController = [[AudioController alloc] init];
     
     // Set background
     CGFloat r = 252;
@@ -32,10 +35,13 @@
 }
 
 - (IBAction)handleNoteClick:(id)sender {
+    [self.audioController playSystemSound:@"note"];
 }
 - (IBAction)handleHillsideClick:(id)sender {
+    [self.audioController playSystemSound:@"hillside"];
 }
 - (IBAction)handleChordClick:(id)sender {
+    [self.audioController playSystemSound:@"chord"];
 }
 
 @end

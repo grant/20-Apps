@@ -13,6 +13,7 @@
 		03737C4619A0857E0044DAFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03737C4419A0857E0044DAFF /* Main.storyboard */; };
 		03737C4819A0857E0044DAFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03737C4719A0857E0044DAFF /* Images.xcassets */; };
 		03737C5419A0857F0044DAFF /* Day_8_NotifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03737C5319A0857F0044DAFF /* Day_8_NotifyTests.m */; };
+		03737C5F19A08EF90044DAFF /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03737C5E19A08EF90044DAFF /* AudioController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		03737C4D19A0857F0044DAFF /* Day 8 NotifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Day 8 NotifyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03737C5219A0857F0044DAFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03737C5319A0857F0044DAFF /* Day_8_NotifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Day_8_NotifyTests.m; sourceTree = "<group>"; };
+		03737C5D19A08ED40044DAFF /* AudioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		03737C5E19A08EF90044DAFF /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				03737C3F19A0857E0044DAFF /* AppDelegate.m */,
 				03737C4119A0857E0044DAFF /* ViewController.h */,
 				03737C4219A0857E0044DAFF /* ViewController.m */,
+				03737C5D19A08ED40044DAFF /* AudioController.h */,
+				03737C5E19A08EF90044DAFF /* AudioController.m */,
 				03737C4419A0857E0044DAFF /* Main.storyboard */,
 				03737C4719A0857E0044DAFF /* Images.xcassets */,
 				03737C3A19A0857E0044DAFF /* Supporting Files */,
@@ -217,6 +222,7 @@
 			files = (
 				03737C4319A0857E0044DAFF /* ViewController.m in Sources */,
 				03737C4019A0857E0044DAFF /* AppDelegate.m in Sources */,
+				03737C5F19A08EF90044DAFF /* AudioController.m in Sources */,
 				03737C3D19A0857E0044DAFF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
