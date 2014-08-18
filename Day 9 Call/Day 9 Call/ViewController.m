@@ -17,7 +17,12 @@
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    // Set background
+    CGFloat r = 252;
+    CGFloat g = 102;
+    CGFloat b = 33;
+    self.view.backgroundColor = [UIColor colorWithRed:(r/255) green:(g/255) blue:(b/255) alpha:255];
 }
 
 - (void)didReceiveMemoryWarning {
