@@ -30,4 +30,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)callStart:(id)sender {
+    NSString *phoneNumber = _phoneField.text;
+    NSString *phoneURL = [NSString stringWithFormat:@"tel://%@", phoneNumber];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneURL]];
+}
+
 @end
