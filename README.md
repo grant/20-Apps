@@ -15,6 +15,7 @@ To become sufficiently good at anything you need **practice, lots of it**. This 
 - Day 7: Map
 - Day 8: Notify
 - Day 9: Call
+- Day 10: New Year
 
 ## Rules
 
