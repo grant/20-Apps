@@ -34,7 +34,7 @@
                nil];
     
     // Setup years
-    int numYears = 200;
+    int numYears = 201;
     int startYear = 1900;
     NSMutableArray *yearsArray = [NSMutableArray arrayWithCapacity:numYears];
     for (int i = 0; i < numYears; ++i) {
@@ -45,6 +45,12 @@
     // Setup year picker
     _datePicker.dataSource = self;
     _datePicker.delegate = self;
+    NSDate *today = [NSDate date];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:today];
+    int todayYear = components.year;
+    int expectedTodayYearRowIndex = (todayYear - startYear);
+    int todayYearRowIndex = MAX(MIN(startYear, expectedTodayYearRowIndex), 0);
+    [_datePicker selectRow:todayYearRowIndex inComponent:0 animated:NO];
 
     // Setup background
     float r = 253;
