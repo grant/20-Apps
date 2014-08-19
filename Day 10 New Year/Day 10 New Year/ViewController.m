@@ -9,14 +9,31 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-            
 
 @end
+
+static NSArray *animals;
 
 @implementation ViewController
             
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Setup animals
+    animals = [NSArray arrayWithObjects:
+               @"Rat",
+               @"Ox",
+               @"Tiger",
+               @"Rabbit",
+               @"Dragon",
+               @"Snake",
+               @"Horse",
+               @"Sheep",
+               @"Monkey",
+               @"Cock",
+               @"Dog",
+               @"Boar",
+               nil];
     
     // Setup background
     float r = 253;
@@ -45,7 +62,14 @@
 
 // Gets the Chinese New Year animal corresponding to a date
 - (NSString*)dateToChineseNewYearAnimal:(NSDate*)date {
-    return @"";
+    unsigned units = NSYearCalendarUnit;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [calendar components:units fromDate:date];
+    
+    NSInteger year = [components year];
+    int yearDifference = ((int)year - 1900) % 12;
+    NSString *animal = animals[yearDifference];
+    return animal;
 }
 
 @end
