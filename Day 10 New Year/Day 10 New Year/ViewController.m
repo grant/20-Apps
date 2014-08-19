@@ -12,15 +12,13 @@
 
 @end
 
-static NSArray *animals;
-
 @implementation ViewController
             
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // Setup animals
-    animals = [NSArray arrayWithObjects:
+    _animals = [NSArray arrayWithObjects:
                @"Rat",
                @"Ox",
                @"Tiger",
@@ -35,15 +33,29 @@ static NSArray *animals;
                @"Boar",
                nil];
     
+    // Setup years
+    int numYears = 200;
+    int startYear = 1900;
+    NSMutableArray *yearsArray = [NSMutableArray arrayWithCapacity:numYears];
+    for (int i = 0; i < numYears; ++i) {
+        [yearsArray addObject:[NSNumber numberWithInt:(startYear + i)]];
+    }
+    _years = [NSArray arrayWithArray:yearsArray];
+    
+    // Setup year picker
+    _datePicker.dataSource = self;
+    _datePicker.delegate = self;
+
     // Setup background
     float r = 253;
     float g = 115;
     float b = 34;
     UIColor *backgroundColor = [UIColor colorWithRed:r/255 green:g/255 blue:b/255 alpha:255];
     [self.view setBackgroundColor:backgroundColor];
-    
+
     // Update animal label
-    [self updateChineseNewYearAnimalLabel];
+    [_animalLabel setFont: [UIFont systemFontOfSize:60]];
+//    [self updateChineseNewYearAnimalLabel];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,20 +67,40 @@ static NSArray *animals;
     [self updateChineseNewYearAnimalLabel];
 }
 
+// The number of columns of data
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+// The number of rows of data
+- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return _years.count;
+}
+
+// Setup picker view rows
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    NSString *year = [[_years objectAtIndex:row] stringValue];
+    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:year attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    return attString;
+}
+
+// Gets the date from the date picker
+- (int)getDatePickerYear {
+    int row = [_datePicker selectedRowInComponent:0];
+    int date = (int)_years[row];
+    return date;
+}
+
 // Updates the Chinese New Year animal text label
 - (void)updateChineseNewYearAnimalLabel {
-    [_animalLabel setText:[self dateToChineseNewYearAnimal:_datePicker.date]];
+    [_animalLabel setText:[self yearToChineseNewYearAnimal:[self getDatePickerYear]]];
 }
 
 // Gets the Chinese New Year animal corresponding to a date
-- (NSString*)dateToChineseNewYearAnimal:(NSDate*)date {
-    unsigned units = NSYearCalendarUnit;
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *components = [calendar components:units fromDate:date];
-    
-    NSInteger year = [components year];
+- (NSString*)yearToChineseNewYearAnimal:(int)year {
     int yearDifference = ((int)year - 1900) % 12;
-    NSString *animal = animals[yearDifference];
+    NSString *animal = _animals[yearDifference];
     return animal;
 }
 

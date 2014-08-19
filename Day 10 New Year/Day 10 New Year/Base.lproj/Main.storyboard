@@ -16,19 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <datePicker appearanceType="aqua" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4E7-JT-Uaw">
-                                <rect key="frame" x="-160" y="-81" width="320" height="162"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <date key="date" timeIntervalSinceReferenceDate="430119940.09992802">
-                                    <!--<__NSDate Class=2014-08-19 05:45:40 +0000 timeInterval=430119940.099928 ISO8601=2014-08-18T22:45:40.100-0700>-->
-                                </date>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="318" width="320" height="162"/>
-                                </variation>
-                                <connections>
-                                    <action selector="dateValueChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="RWM-ns-STS"/>
-                                </connections>
-                            </datePicker>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year of the..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQM-ST-Wcl">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,34 +27,40 @@
                             </label>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dragon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvn-xx-c0W">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="163" width="280" height="129"/>
                                 </variation>
                             </label>
+                            <pickerView appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ge-20-SiV">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="318" width="320" height="162"/>
+                                </variation>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="4E7-JT-Uaw"/>
                                 <exclude reference="BQM-ST-Wcl"/>
                                 <exclude reference="cvn-xx-c0W"/>
+                                <exclude reference="1ge-20-SiV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="4E7-JT-Uaw"/>
                                 <include reference="BQM-ST-Wcl"/>
                                 <include reference="cvn-xx-c0W"/>
+                                <include reference="1ge-20-SiV"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="animalLabel" destination="cvn-xx-c0W" id="9Yq-fR-KrH"/>
-                        <outlet property="datePicker" destination="4E7-JT-Uaw" id="zGG-wB-v3m"/>
+                        <outlet property="datePicker" destination="1ge-20-SiV" id="JbC-5a-T1K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

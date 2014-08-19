@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIPickerView *datePicker;
 @property (weak, nonatomic) IBOutlet UILabel *animalLabel;
+@property (strong, nonatomic) NSArray *years;
+@property (strong, nonatomic) NSArray *animals;
 
 @end
 
