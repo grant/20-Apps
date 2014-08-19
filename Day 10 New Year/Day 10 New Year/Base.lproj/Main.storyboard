@@ -25,6 +25,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="318" width="320" height="162"/>
                                 </variation>
+                                <connections>
+                                    <action selector="dateValueChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="RWM-ns-STS"/>
+                                </connections>
                             </datePicker>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year of the..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQM-ST-Wcl">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -62,6 +65,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="animalLabel" destination="cvn-xx-c0W" id="9Yq-fR-KrH"/>
+                        <outlet property="datePicker" destination="4E7-JT-Uaw" id="zGG-wB-v3m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

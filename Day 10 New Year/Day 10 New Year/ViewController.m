@@ -24,11 +24,28 @@
     float b = 34;
     UIColor *backgroundColor = [UIColor colorWithRed:r/255 green:g/255 blue:b/255 alpha:255];
     [self.view setBackgroundColor:backgroundColor];
+    
+    // Update animal label
+    [self updateChineseNewYearAnimalLabel];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)dateValueChange:(id)sender {
+    [self updateChineseNewYearAnimalLabel];
+}
+
+// Updates the Chinese New Year animal text label
+- (void)updateChineseNewYearAnimalLabel {
+    [_animalLabel setText:[self dateToChineseNewYearAnimal:_datePicker.date]];
+}
+
+// Gets the Chinese New Year animal corresponding to a date
+- (NSString*)dateToChineseNewYearAnimal:(NSDate*)date {
+    return @"";
 }
 
 @end
