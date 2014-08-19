@@ -69,7 +69,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)dateValueChange:(id)sender {
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     [self updateChineseNewYearAnimalLabel];
 }
 
