@@ -61,7 +61,7 @@
 
     // Update animal label
     [_animalLabel setFont: [UIFont systemFontOfSize:60]];
-//    [self updateChineseNewYearAnimalLabel];
+    [self updateChineseNewYearAnimalLabel];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,7 +94,7 @@
 // Gets the date from the date picker
 - (int)getDatePickerYear {
     int row = [_datePicker selectedRowInComponent:0];
-    int date = (int)_years[row];
+    int date = [_years[row] intValue];
     return date;
 }
 
