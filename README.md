@@ -21,6 +21,7 @@ To become sufficiently good at anything you need **practice, lots of it**. This 
 - Day 13: Web
 - Day 14: Battery
 - Day 15: AAPL
+- Day 16: Ping
 
 ## Rules
 
