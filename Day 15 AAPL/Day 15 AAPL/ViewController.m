@@ -18,8 +18,28 @@
     [super viewDidLoad];
     
     // Setup UI
+    _symbolLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2)];
     _stockPriceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _changeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/2, self.view.frame.size.width, self.view.frame.size.height/2)];
+    _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50)];
+    _symbolLabel.textColor = [UIColor whiteColor];
+    _stockPriceLabel.textColor = [UIColor whiteColor];
+    _changeLabel.textColor = [UIColor whiteColor];
+    _timeLabel.textColor = [UIColor whiteColor];
+    _symbolLabel.textAlignment = NSTextAlignmentCenter;
+    _stockPriceLabel.textAlignment = NSTextAlignmentCenter;
+    _changeLabel.textAlignment = NSTextAlignmentCenter;
+    _timeLabel.textAlignment = NSTextAlignmentCenter;
+    _symbolLabel.font = [UIFont systemFontOfSize:30];
+    _stockPriceLabel.font = [UIFont systemFontOfSize:50];
+    _changeLabel.font = [UIFont systemFontOfSize:20];
+    [self.view addSubview:_symbolLabel];
     [self.view addSubview:_stockPriceLabel];
+    [self.view addSubview:_changeLabel];
+    [self.view addSubview:_timeLabel];
+    
+    // Update the stocks
+    [self updateStocks];
     
     // Setup background
     float r = 255;
@@ -39,7 +59,25 @@
     NSString *reqString = @"http://download.finance.yahoo.com/d/quotes.csv?s=AAPL&f=sl1d1t1c1ohgv&e=.csv";
     NSURL *reqURL = [NSURL URLWithString:reqString];
     NSString *data = [self getDataFrom:reqURL];
-    NSArray *dataItems = [data componentsSeparatedByString:@","];
+    data = [data stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+    
+    // If we got the data, update the view
+    if (data != nil) {
+        NSArray *dataItems = [data componentsSeparatedByString:@","];
+        
+        // Parse the data
+        NSString *symbol = dataItems[0];
+        NSString *price = dataItems[1];
+        NSString *date = dataItems[2];
+        NSString *time = dataItems[3];
+        NSString *change = dataItems[4];
+        
+        // Update the UI
+        _symbolLabel.text = symbol;
+        _stockPriceLabel.text = price;
+        _changeLabel.text = change;
+        _timeLabel.text = [NSString stringWithFormat:@"%@ %@", date, time];
+    }
 }
 
 - (NSString *) getDataFrom:(NSURL*)url{
