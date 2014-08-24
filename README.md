@@ -19,6 +19,7 @@ To become sufficiently good at anything you need **practice, lots of it**. This 
 - Day 11: HN
 - Day 12: White
 - Day 13: Web
+- Day 14: Battery
 
 ## Rules
 
