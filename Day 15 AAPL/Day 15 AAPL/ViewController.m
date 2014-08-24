@@ -32,7 +32,7 @@
     _timeLabel.textAlignment = NSTextAlignmentCenter;
     _symbolLabel.font = [UIFont systemFontOfSize:30];
     _stockPriceLabel.font = [UIFont systemFontOfSize:50];
-    _changeLabel.font = [UIFont systemFontOfSize:20];
+    _changeLabel.font = [UIFont systemFontOfSize:30];
     [self.view addSubview:_symbolLabel];
     [self.view addSubview:_stockPriceLabel];
     [self.view addSubview:_changeLabel];
@@ -77,6 +77,13 @@
         _stockPriceLabel.text = price;
         _changeLabel.text = change;
         _timeLabel.text = [NSString stringWithFormat:@"%@ %@", date, time];
+        
+        // Change the color if the change is positive
+        if ([change characterAtIndex:0] == '-') {
+            _changeLabel.textColor = [UIColor redColor];
+        } else {
+            _changeLabel.textColor = [UIColor greenColor];
+        }
     }
 }
 
