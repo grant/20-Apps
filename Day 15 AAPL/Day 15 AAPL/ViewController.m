@@ -38,7 +38,12 @@
     [self.view addSubview:_changeLabel];
     [self.view addSubview:_timeLabel];
     
-    // Update the stocks
+    // Update the stocks every minute
+    [NSTimer scheduledTimerWithTimeInterval:60
+                                     target:self
+                                   selector:@selector(updateTimer:)
+                                   userInfo:nil
+                                    repeats:YES];
     [self updateStocks];
     
     // Setup background
@@ -52,6 +57,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)updateTimer:(id)sender {
+    [self updateStocks];
 }
 
 - (void)updateStocks {
