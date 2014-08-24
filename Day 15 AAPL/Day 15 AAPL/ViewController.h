@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) UILabel *symbolLabel;
+@property (strong, nonatomic) UILabel *stockPriceLabel;
+@property (strong, nonatomic) UILabel *changeLabel;
+@property (strong, nonatomic) UILabel *timeLabel;
 
 @end
 
