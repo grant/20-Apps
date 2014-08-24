@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) UITextField *website;
+@property (strong, nonatomic) UIButton *pingButton;
+@property (strong, nonatomic) UILabel *pingLabel;
 
 @end
 
