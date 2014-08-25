@@ -19,7 +19,7 @@
 
     // Setup UI
     _websiteTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 30, self.view.frame.size.width, 100)];
-    _pingButton = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50)];
+    _pingButton = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 70, self.view.frame.size.width, 50)];
     _pingLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     // Font
     _websiteTextField.font = [UIFont systemFontOfSize:30];
@@ -33,10 +33,12 @@
     _pingLabel.textAlignment = NSTextAlignmentCenter;
     // Set default UI Labels
     _websiteTextField.text = @"google.com";
-    _pingButton.titleLabel.text = @"Ping";
+    [_pingButton setTitle:@"Ping" forState:UIControlStateNormal];
     // Website TextField Keyboard
     _websiteTextField.keyboardType = UIKeyboardTypeURL;
     _websiteTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    // Action listeners
+    [_pingButton addTarget:self action:@selector(pingClick:) forControlEvents:UIControlEventTouchUpInside];
     // Add to view
     [self.view addSubview:_websiteTextField];
     [self.view addSubview:_pingButton];
@@ -53,6 +55,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Starts the ping
+- (void)startPing {
+    
+}
+
+// Action handler for the ping button click
+- (void)pingClick:(id)sender {
+    [self startPing];
 }
 
 @end
