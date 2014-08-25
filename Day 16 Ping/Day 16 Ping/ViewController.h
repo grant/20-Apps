@@ -15,4 +15,3 @@
 @property (strong, nonatomic) UILabel *pingLabel;
 
 @end
-

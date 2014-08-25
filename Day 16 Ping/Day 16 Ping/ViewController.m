@@ -37,7 +37,8 @@
     // Website TextField Keyboard
     _websiteTextField.keyboardType = UIKeyboardTypeURL;
     _websiteTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    [_websiteTextField setReturnKeyType: UIReturnKeyDone];
+    _websiteTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    _websiteTextField.returnKeyType = UIReturnKeyDone;
     _websiteTextField.delegate = self;
     // Action listeners
     [_pingButton addTarget:self action:@selector(pingClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -63,8 +64,36 @@
 - (void)startPing {
     // Setup request
     NSString *reqString = _websiteTextField.text;
-    NSURL *reqURL = [NSURL URLWithString:reqString];
+    NSURL *reqURL = [self getProperURL:reqString];
+    
+    // Make the request
+    long long startDate = (long long)([[NSDate date] timeIntervalSince1970] * 1000.0);
     NSString *data = [self getDataFrom:reqURL];
+    long long endDate = (long long)([[NSDate date] timeIntervalSince1970] * 1000.0);
+    
+    // Calculate the difference
+    long long difference = endDate - startDate;
+    NSString *pingString = [NSString stringWithFormat:@"%lldms", difference];
+    
+    // Update UI
+    _pingLabel.text = pingString;
+    if (difference < 100) {
+        _pingLabel.textColor = [UIColor greenColor];
+    } else if (difference < 200) {
+        _pingLabel.textColor = [UIColor colorWithRed:0.5 green:1 blue:0 alpha:255];
+    } else if (difference < 400) {
+        _pingLabel.textColor = [UIColor yellowColor];
+    } else if (difference < 1000) {
+        _pingLabel.textColor = [UIColor colorWithRed:1 green:1 blue:0 alpha:255];
+    } else {
+        _pingLabel.textColor = [UIColor redColor];
+    }
+}
+
+// Converts a free-form URL string to a properly formatted URL
+- (NSURL*)getProperURL:site {
+    NSString *urlString = [NSString stringWithFormat:@"http://www.%@", site];
+    return [NSURL URLWithString:urlString];
 }
 
 // Action handler for the ping button click
@@ -86,6 +115,7 @@
     return YES;
 }
 
+// Get Ping time
 - (NSString *) getDataFrom:(NSURL*)url{
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
