@@ -37,6 +37,8 @@
     // Website TextField Keyboard
     _websiteTextField.keyboardType = UIKeyboardTypeURL;
     _websiteTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    [_websiteTextField setReturnKeyType: UIReturnKeyDone];
+    _websiteTextField.delegate = self;
     // Action listeners
     [_pingButton addTarget:self action:@selector(pingClick:) forControlEvents:UIControlEventTouchUpInside];
     // Add to view
@@ -59,12 +61,47 @@
 
 // Starts the ping
 - (void)startPing {
-    
+    // Setup request
+    NSString *reqString = _websiteTextField.text;
+    NSURL *reqURL = [NSURL URLWithString:reqString];
+    NSString *data = [self getDataFrom:reqURL];
 }
 
 // Action handler for the ping button click
 - (void)pingClick:(id)sender {
     [self startPing];
+}
+
+// Touch handler
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+    [self startPing];
+}
+
+// Button Done handler
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    [self startPing];
+    return YES;
+}
+
+- (NSString *) getDataFrom:(NSURL*)url{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"GET"];
+    [request setURL:url];
+    
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *responseCode = nil;
+    
+    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
+    
+    if ([responseCode statusCode] != 200){
+        NSLog(@"Error getting %@, HTTP status code %i", url, [responseCode statusCode]);
+        return nil;
+    }
+    
+    return [[NSString alloc] initWithData:oResponseData encoding:NSUTF8StringEncoding];
 }
 
 @end
