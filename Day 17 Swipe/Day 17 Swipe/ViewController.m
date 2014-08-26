@@ -20,12 +20,12 @@
     // Label
     _labelX = 0;
     _labelY = 0;
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(_labelX, _labelY, self.view.frame.size.width, self.view.frame.size.height)];
-    label.text = @"Swipe me!";
-    label.textAlignment = NSTextAlignmentCenter;
-    label.font = [UIFont systemFontOfSize:30];
-    label.textColor = [UIColor whiteColor];
-    [self.view addSubview:label];
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(_labelX, _labelY, self.view.frame.size.width, self.view.frame.size.height)];
+    _label.text = @"Swipe me!";
+    _label.textAlignment = NSTextAlignmentCenter;
+    _label.font = [UIFont systemFontOfSize:30];
+    _label.textColor = [UIColor whiteColor];
+    [self.view addSubview:_label];
     
     // Swipe recognizers
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeLeft:)];
@@ -59,6 +59,13 @@
 }
 - (IBAction)handleSwipeDown:(UISwipeGestureRecognizer*)sender {
     NSLog(@"down");
+}
+
+- (void)moveLabel:(int)dx dy:(int)dy {
+    CGRect frame = _label.frame;
+    frame.origin.x = _label.frame.origin.x + dx;
+    frame.origin.y = _label.frame.origin.y + dy;
+    _label.frame = frame;
 }
 
 - (void)didReceiveMemoryWarning {

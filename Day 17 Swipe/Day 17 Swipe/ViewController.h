@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController<UIGestureRecognizerDelegate>
 
+@property (strong, nonatomic) UILabel *label;
 @property (nonatomic) int labelX;
 @property (nonatomic) int labelY;
 
