@@ -13,7 +13,9 @@
 @end
 
 @implementation ViewController
-            
+
+int MOVE_SPEED = 30;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -49,16 +51,16 @@
 }
 
 - (IBAction)handleSwipeLeft:(UISwipeGestureRecognizer*)sender {
-    NSLog(@"left");
+    [self moveLabel:-MOVE_SPEED dy:0];
 }
 - (IBAction)handleSwipeUp:(UISwipeGestureRecognizer*)sender {
-    NSLog(@"up");
+    [self moveLabel:0 dy:-MOVE_SPEED];
 }
 - (IBAction)handleSwipeRight:(UISwipeGestureRecognizer*)sender {
-    NSLog(@"right");
+    [self moveLabel:MOVE_SPEED dy:0];
 }
 - (IBAction)handleSwipeDown:(UISwipeGestureRecognizer*)sender {
-    NSLog(@"down");
+    [self moveLabel:0 dy:MOVE_SPEED];
 }
 
 - (void)moveLabel:(int)dx dy:(int)dy {

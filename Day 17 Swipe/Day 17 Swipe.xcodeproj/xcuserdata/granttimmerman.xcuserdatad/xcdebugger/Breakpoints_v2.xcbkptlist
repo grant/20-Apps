@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Day 17 Swipe/ViewController.m"
-            timestampString = "430725298.323636"
+            timestampString = "430725547.957536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-moveLabel:dy:"
             landmarkType = "5">
          </BreakpointContent>
