@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-int MOVE_SPEED = 30;
+int MOVE_SPEED = 50;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,7 +67,9 @@ int MOVE_SPEED = 30;
     CGRect frame = _label.frame;
     frame.origin.x = _label.frame.origin.x + dx;
     frame.origin.y = _label.frame.origin.y + dy;
-    _label.frame = frame;
+    [UIView animateWithDuration:0.3 animations:^{
+        _label.frame = frame;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
