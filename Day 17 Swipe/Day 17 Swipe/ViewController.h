@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate>
 
+@property (nonatomic) int labelX;
+@property (nonatomic) int labelY;
 
 @end
 
