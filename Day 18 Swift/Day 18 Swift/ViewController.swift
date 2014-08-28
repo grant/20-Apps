@@ -10,7 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // The number of taps to store in the array
+    let numTapsToStore = 3
+    
+    // Main label
     var label:UILabel;
+    // The dates for the last N number of taps
+    var tapTimes:[NSDate] = [];
     
     required init(coder aDecoder: NSCoder) {
         self.label = UILabel()
@@ -38,6 +44,44 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTap(sender: UITapGestureRecognizer) {
-        println("hi")
+        addTap()
+        updateLabel()
+    }
+    
+    // Adds a tap
+    func addTap() {
+        tapTimes.append(NSDate())
+        if (tapTimes.count > numTapsToStore) {
+            tapTimes.removeAtIndex(0)
+        }
+    }
+    
+    // Updates the tap label
+    func updateLabel() {
+        let tapSpeed:Double = getTapSpeed()
+        switch tapSpeed {
+        case 0...200:
+            label.text = "swift!"
+        case 201...250:
+            label.text = "blazing"
+        case 251...300:
+            label.text = "fast"
+        case 301...350:
+            label.text = "medium"
+        default:
+            label.text = "slow"
+        }
+    }
+    
+    // Calculates the tap speed by averaging the last N taps
+    func getTapSpeed() -> Double {
+        if (tapTimes.count <= 1) {
+            return Double.infinity
+        } else {
+            let firstTime:Double = tapTimes[0].timeIntervalSince1970 * 1000
+            let lastTime:Double = tapTimes[tapTimes.count - 1].timeIntervalSince1970 * 1000
+            let speed:Double = lastTime - firstTime
+            return speed
+        }
     }
 }
