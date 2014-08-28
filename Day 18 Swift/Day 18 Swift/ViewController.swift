@@ -9,15 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set UILabel
+        var label = UILabel(frame: CGRect(x: 0,y: 0,width: self.view.frame.size.width, height: self.view.frame.size.height))
+        label.text = "Tap"
+        label.textAlignment = NSTextAlignment.Center
+        label.textColor = UIColor.whiteColor()
+        label.font = UIFont.systemFontOfSize(50)
+        self.view.addSubview(label)
+        
+        // Set background color
         self.view.backgroundColor = UIColor(red: 255/255, green: 214/255, blue: 59/255, alpha: 255)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func didTap(sender: UITapGestureRecognizer) {
+        println("hi")
     }
 }
