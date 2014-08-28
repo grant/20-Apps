@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+    var label:UILabel;
+    
+    required init(coder aDecoder: NSCoder) {
+        self.label = UILabel()
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set UILabel
-        var label = UILabel(frame: CGRect(x: 0,y: 0,width: self.view.frame.size.width, height: self.view.frame.size.height))
+        // Setup UILabel
+        label.frame = CGRect(x: 0,y: 0,width: self.view.frame.size.width, height: self.view.frame.size.height)
         label.text = "Tap"
         label.textAlignment = NSTextAlignment.Center
         label.textColor = UIColor.whiteColor()
