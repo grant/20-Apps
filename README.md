@@ -1,6 +1,6 @@
 # 20 Apps
 
-Learning iOS development by creating 100 apps in 100 days.
+Learning iOS development by creating 20 apps in 20 days.
 
 To become sufficiently good at anything you need **practice, lots of it**. This is me learning iOS development from no prior experience.
 
