@@ -1,4 +1,4 @@
-# 100 Apps
+# 20 Apps
 
 Learning iOS development by creating 100 apps in 100 days.
 
