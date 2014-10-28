@@ -25,6 +25,7 @@ To become sufficiently good at anything you need **practice, lots of it**. This 
 - Day 17: Swipe
 - Day 18: Swift
 - Day 19: Camera
+- Day 20: ???
 
 ## Rules
 
